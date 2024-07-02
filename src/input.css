@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    *{
+        font-family: Archivo;
+    }
+    
+    body{
+        background-color: #0F102F;
+    }
+    
+    .cursor {
+        position: fixed;
+        border-radius: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        pointer-events: none;
+        left: -100px;
+        top: 50%;
+        mix-blend-mode: difference;
+        background-color: #F05407;
+        z-index: 10000;
+        border: 2px solid transparent;
+        height: 82px;
+        width: 82px;
+        transition: all 300ms ease-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    
+    .animate-fadeIn {
+        animation-name: fadeIn;
+        animation-duration: 1.8s; /* Durasi animasi */
+    }
+    
+    .white-image{
+      filter: invert(1) grayscale(1);
+    }
+
+}
+
